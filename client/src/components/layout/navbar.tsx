@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "wouter";
-import { Menu, X } from "lucide-react";
+import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
@@ -11,7 +11,7 @@ const navItems = [
   { name: "Contact", href: "#contact" }
 ];
 
-export default function Navbar() {
+function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -76,3 +76,5 @@ export default function Navbar() {
     </nav>
   );
 }
+
+export default Navbar;

@@ -38,16 +38,16 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Contact</h3>
+            <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Legal</h3>
             <ul className="mt-4 space-y-4">
               <li>
-                <span className="text-base text-gray-300">info@JoinAKChefs.com</span>
+                <Link href="/terms" className="text-base text-gray-300 hover:text-white">Terms of Service</Link>
               </li>
               <li>
-                <span className="text-base text-gray-300">(800) 975-1539</span>
+                <Link href="/privacy" className="text-base text-gray-300 hover:text-white">Privacy Policy</Link>
               </li>
               <li>
-                <span className="text-base text-gray-300">893 Main St SW, Gainesville, GA 30501</span>
+                <Link href="/cookies" className="text-base text-gray-300 hover:text-white">Cookie Policy</Link>
               </li>
             </ul>
           </div>
@@ -66,6 +66,11 @@ export default function Footer() {
                   <social.icon className="h-6 w-6" />
                 </a>
               ))}
+            </div>
+            <div className="mt-4">
+              <p className="text-gray-400">Contact Us:</p>
+              <p className="text-gray-300 mt-2">info@JoinAKChefs.com</p>
+              <p className="text-gray-300">(800) 975-1539</p>
             </div>
           </div>
         </div>
