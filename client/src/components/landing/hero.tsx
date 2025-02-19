@@ -1,11 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { ArrowRight, Sparkles, TrendingUp, Shield } from "lucide-react";
+import { ArrowRight, Sparkles, TrendingUp, Shield, Users } from "lucide-react";
 
 const stats = [
-  { label: "Success Rate", value: "97%", icon: TrendingUp },
-  { label: "Active Members", value: "1000+", icon: Shield },
-  { label: "Average Profit", value: "$500+", icon: Sparkles },
+  { label: "Success Rate", value: "97%", icon: TrendingUp, description: "Consistent success across all releases" },
+  { label: "Active Members", value: "1000+", icon: Users, description: "Growing community of experts" },
+  { label: "Average Profit", value: "$500+", icon: Sparkles, description: "Per successful release" },
 ];
 
 export default function Hero() {
@@ -23,11 +23,17 @@ export default function Hero() {
             initial={{ scale: 0.95 }}
             animate={{ scale: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
+            className="relative"
           >
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-gray-900">
               Master the Art of
               <span className="text-blue-600 block mt-2">Sneaker Reselling</span>
             </h1>
+            <motion.div
+              className="absolute -top-4 -right-4 w-24 h-24 bg-blue-100 rounded-full blur-3xl opacity-50"
+              animate={{ scale: [1, 1.2, 1], rotate: [0, 45, 0] }}
+              transition={{ duration: 5, repeat: Infinity }}
+            />
           </motion.div>
 
           <motion.p 
@@ -46,13 +52,18 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.6 }}
           >
-            <Button size="lg" className="group" asChild>
+            <Button size="lg" className="group relative overflow-hidden" asChild>
               <a 
                 href="https://whop.com/akchefs/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex items-center"
               >
+                <motion.div
+                  className="absolute inset-0 bg-gradient-to-r from-blue-400/0 via-blue-400/30 to-blue-400/0"
+                  animate={{ x: ["100%", "-100%"] }}
+                  transition={{ duration: 3, repeat: Infinity }}
+                />
                 Start Reselling Today 
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </a>
@@ -74,15 +85,21 @@ export default function Hero() {
             {stats.map((stat, index) => (
               <motion.div
                 key={stat.label}
-                className="bg-white/80 backdrop-blur-sm rounded-lg p-6 shadow-sm"
+                className="group relative bg-white/80 backdrop-blur-sm rounded-lg p-6 shadow-sm hover:shadow-lg transition-all duration-300"
                 whileHover={{ scale: 1.05 }}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, delay: 0.8 + index * 0.1 }}
               >
-                <stat.icon className="h-8 w-8 text-blue-600 mb-3" />
-                <p className="text-3xl font-bold text-gray-900">{stat.value}</p>
-                <p className="text-sm text-gray-600">{stat.label}</p>
+                <motion.div
+                  className="absolute inset-0 bg-gradient-to-r from-blue-50 to-blue-100 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"
+                />
+                <div className="relative z-10">
+                  <stat.icon className="h-8 w-8 text-blue-600 mb-3" />
+                  <p className="text-3xl font-bold text-gray-900">{stat.value}</p>
+                  <p className="text-sm font-medium text-gray-900">{stat.label}</p>
+                  <p className="text-sm text-gray-600 mt-1">{stat.description}</p>
+                </div>
               </motion.div>
             ))}
           </motion.div>
