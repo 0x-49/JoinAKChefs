@@ -4,6 +4,7 @@ import TechStack from "@/components/landing/tech-stack";
 import ROICalculator from "@/components/landing/roi-calculator";
 import MarketIntelligence from "@/components/landing/market-intelligence";
 import TrainingSystem from "@/components/landing/training-system";
+import UseCases from "@/components/landing/use-cases";
 import Testimonials from "@/components/landing/testimonials";
 import SuccessStories from "@/components/landing/success-stories";
 import Partnerships from "@/components/landing/partnerships";
@@ -17,6 +18,7 @@ export default function Home() {
       <Hero />
       <Features />
       <TechStack />
+      <UseCases />
       <ROICalculator />
       <MarketIntelligence />
       <TrainingSystem />
