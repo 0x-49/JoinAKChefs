@@ -6,7 +6,6 @@ import Team from "@/components/landing/team";
 import UseCases from "@/components/landing/use-cases";
 import TrainingSystem from "@/components/landing/training-system";
 import SuccessStories from "@/components/landing/success-stories";
-import Testimonials from "@/components/landing/testimonials";
 import Partnerships from "@/components/landing/partnerships";
 import Pricing from "@/components/landing/pricing";
 import Contact from "@/components/landing/contact";
@@ -23,7 +22,6 @@ export default function Home() {
       <UseCases />
       <TrainingSystem />
       <SuccessStories />
-      <Testimonials />
       <Partnerships />
       <Pricing />
       <Contact />
