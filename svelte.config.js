@@ -8,6 +8,7 @@ const config = {
       // Vercel Edge Functions configuration
       runtime: 'edge',
       regions: ['lhr1'], // London region
+      split: false // Ensures consistent deployment
     }),
     alias: {
       $lib: './src/lib'
