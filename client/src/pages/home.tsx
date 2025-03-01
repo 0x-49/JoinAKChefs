@@ -8,7 +8,6 @@ import TrainingSystem from "@/components/landing/training-system";
 import SuccessStories from "@/components/landing/success-stories";
 import Partnerships from "@/components/landing/partnerships";
 import Pricing from "@/components/landing/pricing";
-import Contact from "@/components/landing/contact";
 import Footer from "@/components/landing/footer";
 
 const AFFILIATE_URL = "https://whop.com/akchefs/?a=digitalartlab";
@@ -206,7 +205,6 @@ export default function Home() {
       <PricingSectionCTA />
       <TechStack />
       <CTASection6 />
-      <Contact />
       <Footer />
     </main>
   );

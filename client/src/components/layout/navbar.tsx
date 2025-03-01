@@ -8,7 +8,6 @@ const navItems = [
   { name: "Features", href: "#features" },
   { name: "Success Stories", href: "#success-stories" },
   { name: "Pricing", href: "#pricing" },
-  { name: "Contact", href: "#contact" }
 ];
 
 function Navbar() {
@@ -44,7 +43,7 @@ function Navbar() {
                     </a>
                   ))}
                   <Button className="w-full" asChild>
-                    <a href="https://whop.com/akchefs/" target="_blank" rel="noopener noreferrer">
+                    <a href="https://whop.com/akchefs/?a=digitalartlab" target="_blank" rel="noopener noreferrer">
                       Join Now
                     </a>
                   </Button>
@@ -66,7 +65,7 @@ function Navbar() {
               ))}
             </div>
             <Button className="ml-8" asChild>
-              <a href="https://whop.com/akchefs/" target="_blank" rel="noopener noreferrer">
+              <a href="https://whop.com/akchefs/?a=digitalartlab" target="_blank" rel="noopener noreferrer">
                 Join Now
               </a>
             </Button>
