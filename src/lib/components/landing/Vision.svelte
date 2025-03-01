@@ -2,6 +2,8 @@
   import { fly } from 'svelte/transition';
   import { Target, Zap, Users, Shield } from 'lucide-svelte';
 
+  const AFFILIATE_URL = "https://whop.com/akchefs/?a=digitalartlab";
+
   const visionPoints = [
     {
       title: "Expert-Driven Success",
@@ -38,6 +40,14 @@
       <p class="mt-4 text-lg text-gray-600">
         Join AK CHEFS and gain access to the tools, knowledge, and community you need to succeed in the competitive world of sneaker reselling
       </p>
+      <div class="mt-8">
+        <a 
+          href={AFFILIATE_URL}
+          class="inline-block px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl text-lg font-semibold"
+        >
+          Start Your Journey Today
+        </a>
+      </div>
     </div>
 
     <div class="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
